@@ -1623,6 +1623,11 @@ h6,
     padding-bottom: 80px;
   }
 
+  .intro__img {
+    -o-object-position: right;
+    object-position: right;
+  }
+
   .intro__loc {
     margin-bottom: 54px;
   }
