@@ -1,0 +1,87 @@
+<!--calc-modal-->
+<div class="modal calc-modal" id="calc-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <button type="button" class="modal__close">
+                <svg><use xlink:href="img/icons/sprite.svg#close"></use></svg>
+            </button>
+            <h2>Запросить расчет</h2>
+            <form action="" class="form" onsubmit="event.preventDefault();formSuccess(this)">
+                <div class="item-form">
+                    <input type="text" maxlength="100">
+                    <div class="item-form__placeholder">Имя<span>*</span></div>
+                    <span class="item-form__error"></span>
+                </div>
+                <div class="item-form">
+                    <input type="tel">
+                    <div class="item-form__placeholder">Номер телефона<span>*</span></div>
+                    <span class="item-form__error"></span>
+                </div>
+                <div class="item-form">
+                    <input type="text" placeholder="Регион">
+                </div>
+                <div class="item-form">
+                    <input type="text" placeholder="Email">
+                </div>
+                <div class="form__footer">
+                    <button type="submit" class="btn main-btn">Отправить</button>
+                    <label class="item-checkbox">
+                        <input type="checkbox" class="required">
+                        <span class="text-s">Даю согласие на <a href="#" target="_blank">обработку своих персональных данных</a></span>
+                        <div class="item-checkbox__error"></div>
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--success-modal-->
+<div class="modal success-modal" id="success-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <button type="button" class="modal__close">
+                <svg><use xlink:href="img/icons/sprite.svg#close"></use></svg>
+            </button>
+            <img src="img/icons/success.svg" alt="">
+            <h2>Ваш запрос отправлен!</h2>
+            <span>Наш менеджер свяжется с вами в ближайшее время.</span>
+        </div>
+    </div>
+</div>
+<!--error-modal-->
+<div class="modal error-modal" id="error-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <button type="button" class="modal__close">
+                <svg><use xlink:href="img/icons/sprite.svg#close"></use></svg>
+            </button>
+            <img src="img/icons/error.svg" alt="">
+            <h2>Что-то пошло не так</h2>
+            <span>Попробуйте снова</span>
+        </div>
+    </div>
+</div>
+<!--requisite-modal-->
+<div class="modal requisite-modal" id="requisite-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <button type="button" class="modal__close">
+                <svg><use xlink:href="img/icons/sprite.svg#close"></use></svg>
+            </button>
+            <h2>Реквизиты</h2>
+            <div class="page-content">
+                <p>Общество с ограниченной ответственностью «М-СТРОЙ»</p>
+                <p>Юридический адрес: Россия, 603137, Нижегородская обл., город Нижний Новгород, деревня Ольгино, 78А</p>
+                <p>ИНН: 5261134985</p>
+                <p>КПП: 526101001</p>
+                <p>ОГРН: 1235200021737</p>
+                <p>Банк: ВОЛГО-ВЯТСКИЙ БАНК ПАО СБЕРБАНК</p>
+                <p>Расчетный счет: 40702810242000007512</p>
+                <p>Корреспондентский счет: 30101810900000000603</p>
+                <p>БИК: 042202603</p>
+                <p>Телефон: <a href="tel:88314239999">8 (831) 423 9999</a></p>
+                <p>Эл. почта: <a href="mailto:info@mstroy-52.ru">info@mstroy-52.ru</a></p>
+           </div>
+        </div>
+    </div>
+</div>

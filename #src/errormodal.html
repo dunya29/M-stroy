@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@@include('_head.html', {   
+    "title": "Главная"
+})
+
+<body>
+    @@include("_svg.html")
+    <div class="wrap">
+        <!--header-->
+        @@include('_header-main.html')
+        <!--main-->  
+        <main class="main">
+            <!--intro-->
+            <section class="section intro">
+                <picture>
+                    <source srcset="img/intro.webp" media="(min-width: 1199.98px)" type="image/webp">
+                    <source srcset="img/intro.jpg" media="(min-width: 1199.98px)">
+                    <source srcset="img/intro-tablet.webp" type="image/webp">
+                    <source srcset="img/intro-tablet.jpg"> 
+                    <img class="intro__img" src="img/intro.jpg" alt="">
+                </picture>
+                <div class="container">
+                    <div class="intro__content">
+                        <h1>Доставка песка, щебня, грунта и услуги спецтехники</h1>
+                        <div class="intro__loc">
+                            <img src="img/icons/location.svg" alt="локация">
+                            <span class="h4">Нижегородская, Владимирская и Московская области</span>         
+                        </div>
+                        <form action="" class="intro-form">
+                            <div class="item-form">
+                                <input type="tel" placeholder="Ваш телефон">
+                            </div>
+                            <button type="submit" class="btn main-btn">Запросить расчет</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <!--materials-->
+            <section class="section materials" id="materials-sec">
+                <div class="container">
+                    <div class="mb-60 materials__top">
+                        <h2>Перевозим и доставляем материалы</h2>
+                        <div class="materials__content">
+                            <p>Осуществляем грузоперевозки современными самосвалами разного типа грузоподъемности</p>
+                            <p>Сотрудничаем непосредственно с производителями и карьерами, обходя посредников и сохраняя низкие цены</p>
+                        </div>
+                    </div>
+                    <div class="materials__items">
+                        <div class="item-mat">
+                            <div class="media-cover">
+                                <picture>
+                                    <source srcset="img/material-1.webp" media="(min-width: 1199.98px)" type="image/webp">
+                                    <source srcset="img/material-1.png" media="(min-width: 1199.98px)">
+                                    <source srcset="img/material-1-tablet.webp" type="image/webp">
+                                    <source srcset="img/material-1-tablet.png"> 
+                                    <img src="img/material-1.png" alt="Песок">
+                                </picture>
+                            </div>
+                            <div class="item-mat__content">
+                                <h4>Песок</h4>
+                                <ul>
+                                    <li>Карьерный</li>
+                                    <li>Речной</li>
+                                </ul>
+                                <button type="button" class="btn main-btn modal-show-btn" data-modal="calc-modal">Запросить расчет</button>
+                            </div>
+                        </div>
+                        <div class="item-mat">
+                            <div class="media-cover">
+                                <picture>
+                                    <source srcset="img/material-2.webp" media="(min-width: 1199.98px)" type="image/webp">
+                                    <source srcset="img/material-2.png" media="(min-width: 1199.98px)">
+                                    <source srcset="img/material-2-tablet.webp" type="image/webp">
+                                    <source srcset="img/material-2-tablet.png"> 
+                                    <img src="img/material-2.png" alt="Щебень">
+                                </picture>
+                            </div>
+                            <div class="item-mat__content">
+                                <h4>Щебень</h4>
+                                <ul>
+                                    <li>Известняковый</li>
+                                    <li>Гранитный</li>
+                                    <li>Доломитовый</li>
+                                    <li>Гравийный</li>
+                                </ul>
+                                <button type="button" class="btn main-btn modal-show-btn" data-modal="calc-modal">Запросить расчет</button>
+                            </div>
+                        </div>
+                        <div class="item-mat">
+                            <div class="media-cover">
+                                <picture>
+                                    <source srcset="img/material-3.webp" media="(min-width: 1199.98px)" type="image/webp">
+                                    <source srcset="img/material-3.png" media="(min-width: 1199.98px)">
+                                    <source srcset="img/material-3-tablet.webp" type="image/webp">
+                                    <source srcset="img/material-3-tablet.png"> 
+                                    <img src="img/material-3.png" alt="Грунт">
+                                </picture>
+                            </div>
+                            <div class="item-mat__content">
+                                <h4>Грунт</h4>
+                                <ul>
+                                    <li>Чернозем</li>
+                                    <li>Полевой плодородный</li>
+                                    <li>Суглинок</li>
+                                    <li>Глина</li>
+                                </ul>
+                                <button type="button" class="btn main-btn modal-show-btn" data-modal="calc-modal">Запросить расчет</button>
+                            </div>
+                        </div>
+                        <div class="item-mat">
+                            <div class="media-cover">
+                                <picture>
+                                    <source srcset="img/material-4.webp" media="(min-width: 1199.98px)" type="image/webp">
+                                    <source srcset="img/material-4.png" media="(min-width: 1199.98px)">
+                                    <source srcset="img/material-4-tablet.webp" type="image/webp">
+                                    <source srcset="img/material-4-tablet.png"> 
+                                    <img src="img/material-4.png" alt="Асфальт">
+                                </picture>
+                            </div>
+                            <div class="item-mat__content">
+                                <h4>Асфальт</h4>
+                                <ul>
+                                    <li>Горячий асфальт разных марок и типов</li>
+                                </ul>
+                                <button type="button" class="btn main-btn modal-show-btn" data-modal="calc-modal">Запросить расчет</button>
+                            </div>
+                        </div>
+                        <div class="item-mat">
+                            <div class="media-cover">
+                                <picture>
+                                    <source srcset="img/material-5.webp" media="(min-width: 1199.98px)" type="image/webp">
+                                    <source srcset="img/material-5.png" media="(min-width: 1199.98px)">
+                                    <source srcset="img/material-5-tablet.webp" type="image/webp">
+                                    <source srcset="img/material-5-tablet.png"> 
+                                    <img src="img/material-5.png" alt="Смеси">
+                                </picture>
+                            </div>
+                            <div class="item-mat__content">
+                                <h4>Смеси</h4>
+                                <ul>
+                                    <li>ОПГС</li>
+                                    <li>ПГС</li>
+                                    <li>ЩПС</li>
+                                </ul>
+                                <button type="button" class="btn main-btn modal-show-btn" data-modal="calc-modal">Запросить расчет</button>
+                            </div>
+                        </div>
+                        <div class="item-mat">
+                            <div class="media-cover">
+                                <picture>
+                                    <source srcset="img/material-6.webp" media="(min-width: 1199.98px)" type="image/webp">
+                                    <source srcset="img/material-6.png" media="(min-width: 1199.98px)">
+                                    <source srcset="img/material-6-tablet.webp" type="image/webp">
+                                    <source srcset="img/material-6-tablet.png"> 
+                                    <img src="img/material-6.png" alt="Вторичное сырье">
+                                </picture>
+                            </div>
+                            <div class="item-mat__content">
+                                <h4>Вторичное сырье</h4>
+                                <ul>
+                                    <li>Асфальтобетонный гранулят</li>
+                                    <li>Бой кирпича</li>
+                                </ul>
+                                <button type="button" class="btn main-btn modal-show-btn" data-modal="calc-modal">Запросить расчет</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--services-->
+            <section class="section services" id="services-sec">
+                <div class="container">
+                    <div class="mb-60 services__top">
+                        <h2>Услуги спецтехники</h2>
+                        <div class="services__content">
+                            <h4>Наш автопарк насчитывает 50 единиц техники</h4>
+                        </div>
+                    </div>
+                    <div class="services__items">
+                        <div class="item-service">
+                            <div class="media-cover">
+                                <picture>
+                                    <source srcset="img/service-1.webp" media="(min-width: 1650.98px), (max-width: 991.98px)" type="image/webp">
+                                    <source srcset="img/service-1.jpg" media="(min-width: 1650.98px), (max-width: 991.98px)">
+                                    <source srcset="img/service-1-tablet.webp" type="image/webp">
+                                    <source srcset="img/service-1-tablet.jpg"> 
+                                    <img src="img/service-1.jpg" alt="Самосвалы">
+                                </picture>
+                            </div>
+                            <div class="item-service__content">
+                                <h4>Самосвалы</h4>
+                            </div>
+                        </div>
+                        <div class="item-service">
+                            <div class="media-cover">
+                                <picture>
+                                    <source srcset="img/service-2.webp" media="(min-width: 1650.98px), (max-width: 991.98px)" type="image/webp">
+                                    <source srcset="img/service-2.jpg" media="(min-width: 1650.98px), (max-width: 991.98px)">
+                                    <source srcset="img/service-2-tablet.webp" type="image/webp">
+                                    <source srcset="img/service-2-tablet.jpg"> 
+                                    <img src="img/service-2.jpg" alt="Фронтальные погрузчики">
+                                </picture>
+                            </div>
+                            <div class="item-service__content">
+                                <h4>Фронтальные погрузчики</h4>
+                            </div>
+                        </div>
+                        <div class="item-service">
+                            <div class="media-cover">
+                                <picture>
+                                    <source srcset="img/service-3.webp" media="(min-width: 1650.98px), (max-width: 991.98px)" type="image/webp">
+                                    <source srcset="img/service-3.jpg" media="(min-width: 1650.98px), (max-width: 991.98px)">
+                                    <source srcset="img/service-3-tablet.webp" type="image/webp">
+                                    <source srcset="img/service-3-tablet.jpg"> 
+                                    <img src="img/service-3.jpg" alt="Гусеничные экскаваторы">
+                                </picture>                           
+                            </div>
+                            <div class="item-service__content">
+                                <h4>Гусеничные экскаваторы</h4>
+                            </div>
+                        </div>
+                        <div class="item-service">
+                            <div class="media-cover">
+                                <picture>
+                                    <source srcset="img/service-4.webp" media="(min-width: 1650.98px), (max-width: 991.98px)" type="image/webp">
+                                    <source srcset="img/service-4.jpg" media="(min-width: 1650.98px), (max-width: 991.98px)">
+                                    <source srcset="img/service-4-tablet.webp" type="image/webp">
+                                    <source srcset="img/service-4-tablet.jpg"> 
+                                    <img src="img/service-4.jpg" alt="Экскаваторы-погрузчики">
+                                </picture>   
+                            </div>
+                            <div class="item-service__content">
+                                <h4>Экскаваторы-погрузчики</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn main-btn services__btn modal-show-btn" data-modal="calc-modal">Запросить расчет</button>
+                </div>
+            </section>
+            <!--map-->
+            <section class="section map">
+                <div class="container">
+                    <div class="map__content">
+                        <h2>География работы</h2>
+                        <h4>Мы осуществляем перевозки по центральной части России</h4>
+                    </div>
+                </div>
+            </section>
+            <!--about-->
+            <section class="section about">
+                <div class="container">
+                    <h2 class="mb-60">Надежность и качество, проверенные временем</h2>
+                    <div class="about__items">
+                        <div class="item-about">
+                            <h2>7 лет</h2>
+                            <span>надежной работы ГК</span>
+                        </div>
+                        <div class="item-about">
+                            <h2>50 единиц</h2>
+                            <span>техники в нашем автопарке</span>
+                        </div>
+                        <div class="item-about">
+                            <h2>10 000 тонн</h2>
+                            <span>материалов перевозим за сутки</span>
+                        </div>
+                        <div class="item-about">
+                            <h2>800 км</h2>
+                            <span>за сутки проезжает наш грузовик</span>
+                        </div>
+                    </div>
+                </div>
+                <img src="img/about.png" class="about__img" alt="">
+            </section>
+            <!--clients-->
+            <section class="section clients" id="clients-sec">
+                <div class="container">
+                    <div class="mb-60 clients__top">
+                        <h2>Наши клиенты</h2>
+                        <div class="clients__btns">
+                            <button type="button" class="btn nav-btn nav-btn--prev"><svg><use xlink:href="img/icons/sprite.svg#prev"></use></svg></button>
+                            <button type="button" class="btn nav-btn nav-btn--next"><svg><use xlink:href="img/icons/sprite.svg#next"></use></svg></button>
+                        </div>
+                    </div>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="media-contain"><img src="img/client-1.png" alt=""></div>  
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="media-contain"><img src="img/client-2.png" alt=""></div>  
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="media-contain"><img src="img/client-3.png" alt=""></div>  
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="media-contain"><img src="img/client-4.png" alt=""></div>  
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="media-contain"><img src="img/client-5.png" alt=""></div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+         <!--footer-->
+        @@include('_footer-main.html')
+        <!--calc-modal-->
+<div class="modal calc-modal" id="calc-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <button type="button" class="modal__close">
+                <svg><use xlink:href="img/icons/sprite.svg#close"></use></svg>
+            </button>
+            <h2>Запросить расчет</h2>
+            <form action="" class="form" onsubmit="event.preventDefault();formSuccess(this)">
+                <div class="item-form">
+                    <input type="text" maxlength="100">
+                    <div class="item-form__placeholder">Имя<span>*</span></div>
+                    <span class="item-form__error"></span>
+                </div>
+                <div class="item-form">
+                    <input type="tel">
+                    <div class="item-form__placeholder">Номер телефона<span>*</span></div>
+                    <span class="item-form__error"></span>
+                </div>
+                <div class="item-form">
+                    <input type="text" placeholder="Регион">
+                </div>
+                <div class="item-form">
+                    <input type="text" placeholder="Email">
+                </div>
+                <div class="form__footer">
+                    <button type="submit" class="btn main-btn">Отправить</button>
+                    <label class="item-checkbox">
+                        <input type="checkbox" class="required">
+                        <span class="text-s">Даю согласие на <a href="#" target="_blank">обработку своих персональных данных</a></span>
+                        <div class="item-checkbox__error"></div>
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--success-modal-->
+<div class="modal success-modal" id="success-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <button type="button" class="modal__close">
+                <svg><use xlink:href="img/icons/sprite.svg#close"></use></svg>
+            </button>
+            <img src="img/icons/success.svg" alt="">
+            <h2>Ваш запрос отправлен!</h2>
+            <span>Наш менеджер свяжется с вами в ближайшее время.</span>
+        </div>
+    </div>
+</div>
+<!--error-modal-->
+<div class="modal error-modal open" id="error-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <button type="button" class="modal__close">
+                <svg><use xlink:href="img/icons/sprite.svg#close"></use></svg>
+            </button>
+            <img src="img/icons/error.svg" alt="">
+            <h2>Что-то пошло не так</h2>
+            <span>Попробуйте снова</span>
+        </div>
+    </div>
+</div>
+<!--requisite-modal-->
+<div class="modal requisite-modal" id="requisite-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <button type="button" class="modal__close">
+                <svg><use xlink:href="img/icons/sprite.svg#close"></use></svg>
+            </button>
+            <h2>Реквизиты</h2>
+            <div class="page-content">
+                <p>Общество с ограниченной ответственностью «М-СТРОЙ»</p>
+                <p>Юридический адрес: Россия, 603137, Нижегородская обл., город Нижний Новгород, деревня Ольгино, 78А</p>
+                <p>ИНН: 5261134985</p>
+                <p>КПП: 526101001</p>
+                <p>ОГРН: 1235200021737</p>
+                <p>Банк: ВОЛГО-ВЯТСКИЙ БАНК ПАО СБЕРБАНК</p>
+                <p>Расчетный счет: 40702810242000007512</p>
+                <p>Корреспондентский счет: 30101810900000000603</p>
+                <p>БИК: 042202603</p>
+                <p>Телефон: <a href="tel:88314239999">8 (831) 423 9999</a></p>
+                <p>Эл. почта: <a href="mailto:info@mstroy-52.ru">info@mstroy-52.ru</a></p>
+           </div>
+        </div>
+    </div>
+</div>
+    </div>
+    @@include('_js.html')
+</body>
+
+</html>

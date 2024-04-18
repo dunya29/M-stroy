@@ -1,0 +1,136 @@
+.modal {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    overflow: hidden;
+    transition: all .3s .1s ease-out;
+    &.open {
+        visibility: visible;
+        opacity: 1;
+        transition: all .3s ease-out;
+        .modal__content {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all .3s .1s ease-out;
+        }
+    }
+    .page-content p {
+        font-size: 18px;
+        margin-bottom: 12px;
+        @media (max-width: $bp2) {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+    }
+    .main-btn {
+        @media (max-width: $bp2) {
+            font-size: 18px;
+        }
+    }
+    h2 {
+        margin-bottom: 32px;
+        text-align: center;
+        @media (max-width: $bp1) {
+            margin-bottom: 24px;
+        }
+    }
+    &__overlay {
+        padding: 40px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0, 0.7);
+        overflow: auto;
+    }
+    &__content {
+        width: 100%;
+        max-width: 580px;
+        padding: 40px;
+        margin: auto;
+        background: $white;
+        position: relative;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all .3s ease-out;
+        @media (max-width: $bp1) {
+            max-width: 370px;
+        }
+        @media (max-width: $bp2) {
+            padding: 40px 20px;
+        }
+    }
+    &__close {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 24px;
+        top: 24px;
+        svg {
+            width: 100%;
+            height: 100%;
+            fill: $gray;
+            pointer-events: none;
+        }
+        @media (max-width: $bp1) {
+            right: 20px;
+            top: 20px;
+        }
+        @media (max-width: $bp2) {
+            right: 15px;
+            top: 15px;
+        }
+    }
+}
+.success-modal, .error-modal {
+    .modal__content {
+        min-height: 553px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @media (max-width: $bp1) {
+            min-height: 533px;
+        }
+        @media (max-width: $bp2) {
+            min-height: 480px;
+        }
+    }
+    img {
+        margin-bottom: 24px;
+    }
+    h2 {
+        margin-bottom: 10px;
+    }
+    span {
+        color: $gray;
+        max-width: 301px;
+        text-align: center;
+    }
+}
+.error-modal {
+    h2 {
+        color: #F32C1F;
+    }
+}
+.requisite-modal {
+    .modal__content {
+        max-width: 580px;
+        word-break: normal;
+        @media (max-width: $bp1) {
+            max-width: 370px;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.map {
+    background: url(../img/map.png) center / cover no-repeat, #f6f6f6;
+    @media (max-width: $bp1) {
+        background-size: auto 130%;
+        background-position: center right 60%;
+    }
+    @media (max-width: 991.98px) {
+        background-image:  url(../img/map-tablet.png);
+        background-position: center right;
+        background-size: cover;
+    }
+    @media (max-width: $bp3) {
+        background-position: center right 40%;
+    }
+    @media (max-width: $bp6) {
+        background-position: center right 30%;
+    }
+    .container {
+        min-height: 600px;
+        display: flex;
+        align-items: center;
+        @media (max-width: $bp1) {
+            min-height: 462px;
+        }
+        @media (max-width: $bp2) {
+            min-height: 370px;
+            padding-top: 40px;
+            align-items: flex-start;
+        }
+    }
+	&__content {
+        max-width: 480px;
+        @media (max-width: $bp2) {
+            max-width: 280px;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        h4 {
+            font-weight: 400;
+            color: $gray;
+        }
+        @media (max-width: $bp1) {
+            max-width: 580px;
+        }
+    }
+}

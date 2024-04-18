@@ -1,0 +1,128 @@
+.intro {
+    position: relative;
+    z-index: 1;
+    h1 {
+        color: $white;
+        margin-bottom: 38px;
+        @media (max-width: $bp1) {
+            margin-bottom: 20px;
+        }
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(25,17,9, 40%);
+        z-index: -1;
+    }
+    .container {
+        min-height: 100vh;
+        padding-top: 200px;
+        padding-bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @media (max-width: $bp1) {
+            padding-top: 150px;
+            padding-bottom: 80px;
+        }
+        @media (max-width: $bp2) {
+            padding-top: 130px;
+            padding-bottom: 80px;
+        }
+        @media (max-width: $bp3) {
+            padding-top: 230px;
+            padding-bottom: 60px;
+            min-height: calc(100vh - 60px);
+        }
+    }
+	&__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -2;
+    }
+	&__content {
+        max-width: 786px;
+        @media (max-width: $bp2) {
+            max-width: 535px;
+        }
+    }
+	&__loc {
+        display: grid;
+        grid-template-columns: 60px 1fr;
+        gap: 16px;
+        align-items: start;
+        margin-bottom: 80px;
+        span {
+            font-weight: 400;
+            max-width: 490px;
+            color: $white;
+            align-self: center;
+        }
+        @media (max-width: $bp1) {
+            margin-bottom: 54px;
+            span {
+                max-width: 393px;
+            }
+        }
+        @media (max-width: $bp2) {
+            grid-template-columns: 36px 1fr;
+            margin-bottom: 30px;
+            span {
+                max-width: 295px;
+            }
+        }
+    }
+    @media(min-width: 2600px) and (min-height: 1500px) {
+        .container {
+            min-height: 1500px;
+        }
+    }
+    @media (min-height: 1500px) {
+        .container {
+            min-height: 1500px;
+        }
+    }
+}
+.intro-form {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    border: 1px solid $light-gray;
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.8);
+    .item-form {
+        flex: 1;
+        margin-bottom: 0;
+        input {
+            background: transparent;
+        }
+    }
+    @media (max-width: $bp2) {
+        padding: 5px;
+        .main-btn {
+            padding: 12.5px 19px;
+        }
+        .item-form input, .item-form__placeholder {
+            padding: 12px;
+            min-height: 42px;
+        }
+    }
+    @media (max-width: $bp6) {
+        .item-form input, .item-form__placeholder {
+            padding: 6px
+        }
+        .main-btn {
+            font-size: 13px;
+            padding: 12px;
+        }
+      }
+}
