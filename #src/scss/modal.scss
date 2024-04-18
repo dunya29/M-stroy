@@ -22,6 +22,12 @@
     .page-content p {
         font-size: 18px;
         margin-bottom: 12px;
+        a {
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
         @media (max-width: $bp2) {
             font-size: 14px;
             margin-bottom: 10px;

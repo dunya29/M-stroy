@@ -434,7 +434,7 @@ h6,
   margin-bottom: 24px;
 }
 
-.page-content a:hover {
+.page-content a {
   text-decoration: underline;
 }
 
@@ -1346,6 +1346,14 @@ h6,
   margin-bottom: 12px;
 }
 
+.modal .page-content p a {
+  text-decoration: none;
+}
+
+.modal .page-content p a:hover {
+  text-decoration: underline;
+}
+
 .modal h2 {
   margin-bottom: 32px;
   text-align: center;
@@ -1942,6 +1950,7 @@ h6,
   }
 
   .icon-menu.open span {
+    height: 2px;
     -webkit-transition: background 0.4s ease-in-out, top 0.2s ease-in-out, bottom 0.2s ease-in-out, opacity 0.1s 0.2s ease-in-out, -webkit-transform 0.3s ease-in-out 0.2s;
     transition: background 0.4s ease-in-out, top 0.2s ease-in-out, bottom 0.2s ease-in-out, opacity 0.1s 0.2s ease-in-out, -webkit-transform 0.3s ease-in-out 0.2s;
     transition: background 0.4s ease-in-out, top 0.2s ease-in-out, bottom 0.2s ease-in-out, transform 0.3s ease-in-out 0.2s, opacity 0.1s 0.2s ease-in-out;
@@ -1952,7 +1961,7 @@ h6,
   }
 
   .icon-menu.open span:first-child {
-    top: calc(50% - 0.5px);
+    top: calc(50% - 1px);
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -1963,7 +1972,7 @@ h6,
   }
 
   .icon-menu.open span:last-child {
-    bottom: calc(50% - 0.5px);
+    bottom: calc(50% - 1px);
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
@@ -2191,7 +2200,7 @@ h6,
   .intro .container {
     padding-top: 230px;
     padding-bottom: 60px;
-    min-height: calc(100vh - 60px);
+    min-height: calc(100vh - 50px);
   }
 
   .materials__content {

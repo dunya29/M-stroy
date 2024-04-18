@@ -151,17 +151,18 @@
         &.open{
             opacity: 0.5;
             span {
+                height: 2px;
                 transition: background .4s ease-in-out, top .2s ease-in-out,bottom .2s ease-in-out,transform .3s  ease-in-out .2s,opacity .1s .2s ease-in-out;
                 transform-origin: center center;
                 &:first-child {
-                    top: calc(50% - 0.5px); 
+                    top: calc(50% - 1px); 
                     transform: rotate(45deg);
                 }
                 &:nth-child(2) {
                     opacity: 0;
                 }
                 &:last-child {
-                    bottom: calc(50% - 0.5px);
+                    bottom: calc(50% - 1px);
                     transform: rotate(-45deg);
                 }
             }
