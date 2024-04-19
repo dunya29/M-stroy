@@ -22,6 +22,11 @@ body {
   -webkit-tap-highlight-color: transparent;
   word-break: break-word;
   overflow-x: hidden;
+  &.loaded .preloader{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
   @media (max-width: $bp2) {
     font-size: 16px;
   }
@@ -42,6 +47,19 @@ body {
   &.show {
     visibility: visible;
     opacity: 1;
+  }
+}
+.cursor-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  transition: opacity .3s ease;
+  @media (max-width: $bp2) {
+    opacity: 0 !important;
   }
 }
 h1, .h1 {
@@ -177,7 +195,6 @@ h6, .h6 {
 }
 .section {
   margin-bottom: 180px;
-  overflow: hidden;
   &:last-child {
     margin-bottom: 140px;
   }
@@ -263,6 +280,7 @@ h6, .h6 {
   }
 }
 .main-btn {
+  color: $maincolor;
   background-color: $primary;
   &:hover, &:active {
     color: $white;
@@ -272,6 +290,10 @@ h6, .h6 {
 .stroke-btn {
   color: $white;
   border: 1px solid $white;
+  &:hover, &:active {
+    color: $maincolor;
+    border-color: $maincolor;
+  }
 }
 .link {
   display: inline-block;
@@ -401,7 +423,7 @@ h6, .h6 {
     border-radius: 8px;
     @media (max-width: $bp2) {
       min-height: 46px;
-      font-size: 14px;
+      font-size: 16px;
       padding: 13px 31px;
     }
   }

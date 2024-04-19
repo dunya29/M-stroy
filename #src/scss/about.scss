@@ -1,6 +1,7 @@
 .about {
     .container {
         position: relative;
+        z-index: 1;
     }
 	&__items {
         display: grid;

@@ -5,9 +5,10 @@
     "title": "Главная"
 })
 
-<body>
+<body class="no-scroll">
     @@include("_svg.html")
     <div class="wrap">
+        @@include('_preloader.html')
         <!--header-->
         @@include('_header-main.html')
         <!--main-->  
@@ -28,9 +29,9 @@
                             <img src="img/icons/location.svg" alt="локация">
                             <span class="h4">Нижегородская, Владимирская и Московская области</span>         
                         </div>
-                        <form action="" class="intro-form">
+                        <form action="" class="intro-form" onsubmit="event.preventDefault();formSuccess(this)">
                             <div class="item-form">
-                                <input type="tel" placeholder="Ваш телефон">
+                                <input type="tel" placeholder="Ваш телефон" pattern="[0-9]*" novalidate>
                             </div>
                             <button type="submit" class="btn main-btn">Запросить расчет</button>
                         </form>
@@ -41,10 +42,10 @@
             <section class="section materials" id="materials-sec">
                 <div class="container">
                     <div class="mb-60 materials__top">
-                        <h2>Перевозим и доставляем материалы</h2>
+                        <h2 class="fadeUp-item">Перевозим и доставляем материалы</h2>
                         <div class="materials__content">
-                            <p>Осуществляем грузоперевозки современными самосвалами разного типа грузоподъемности</p>
-                            <p>Сотрудничаем непосредственно с производителями и карьерами, обходя посредников и сохраняя низкие цены</p>
+                            <p class="fadeUp-item">Осуществляем грузоперевозки современными самосвалами разного типа грузоподъемности</p>
+                            <p class="fadeUp-item">Сотрудничаем непосредственно с производителями и карьерами, обходя посредников и сохраняя низкие цены</p>
                         </div>
                     </div>
                     <div class="materials__items">
@@ -173,8 +174,8 @@
             <section class="section services" id="services-sec">
                 <div class="container">
                     <div class="mb-60 services__top">
-                        <h2>Услуги спецтехники</h2>
-                        <div class="services__content">
+                        <h2 class="fadeUp-item">Услуги спецтехники</h2>
+                        <div class="fadeUp-item services__content">
                             <h4>Наш автопарк насчитывает 50 единиц техники</h4>
                         </div>
                     </div>
@@ -236,22 +237,22 @@
                             </div>
                         </div>
                     </div>
-                    <button type="button" class="btn main-btn services__btn modal-show-btn" data-modal="calc-modal">Запросить расчет</button>
+                    <button type="button" class="btn main-btn services__btn modal-show-btn fadeUp-item" data-modal="calc-modal">Запросить расчет</button>
                 </div>
             </section>
             <!--map-->
             <section class="section map">
                 <div class="container">
                     <div class="map__content">
-                        <h2>География работы</h2>
-                        <h4>Мы осуществляем перевозки по центральной части России</h4>
+                        <h2 class="fadeUp-item">География работы</h2>
+                        <h4 class="fadeUp-item">Мы осуществляем перевозки по центральной части России</h4>
                     </div>
                 </div>
             </section>
             <!--about-->
             <section class="section about">
                 <div class="container">
-                    <h2 class="mb-60">Надежность и качество, проверенные временем</h2>
+                    <h2 class="fadeUp-item mb-60">Надежность и качество, проверенные временем</h2>
                     <div class="about__items">
                         <div class="item-about">
                             <h2>7 лет</h2>
@@ -271,7 +272,7 @@
                         </div>
                     </div>
                 </div>
-                <img src="img/about.png" class="about__img" alt="">
+                <div class="fadeUp-item about__img"><img src="img/about.png" alt=""></div>               
             </section>
             <!--clients-->
             <section class="section clients" id="clients-sec">
@@ -284,7 +285,7 @@
                         </div>
                     </div>
                     <div class="swiper">
-                        <div class="swiper-wrapper">
+                        <div class="my-cursor swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="media-contain"><img src="img/client-1.png" alt=""></div>  
                             </div>

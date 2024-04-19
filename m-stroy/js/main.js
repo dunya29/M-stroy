@@ -6,6 +6,17 @@ const modal = document.querySelectorAll(".modal")
 const successModal = document.querySelector(".success-modal")
 const errorModal = document.querySelector(".error-modal")
 let animSpd = 400
+window.addEventListener("load", () => {
+    document.body.classList.add("loaded")
+    document.body.classList.remove("no-scroll")
+    setTimeout(() => {
+        //intro fadeUp
+        const intro = document.querySelector(".intro")
+        if (intro) {
+           intro.classList.add("animated")
+        }
+    }, 500);
+});
 //enable scroll
 function enableScroll() {
     if (fixedBlocks) {
@@ -171,6 +182,24 @@ if (clientsSwiper) {
             }
         }
     })
+    let tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: clientsSwiper,
+           // scrub: 1,
+            start: "bottom bottom",
+            invalidateOnRefresh: true,
+          }
+    })
+    tl.fromTo(clientsSwiper, 
+    {
+        opacity: 0,
+        xPercent: 25,
+    },
+    {
+        opacity: 1,
+        xPercent: 0,
+        duration: 2,
+    });
 }
 //anchor
 if (document.querySelector(".js-anchor")) {
@@ -189,4 +218,157 @@ if (document.querySelector(".js-anchor")) {
         }      
       })
     })
-  }
+}
+//custom cursor
+let myCursor = document.querySelectorAll(".my-cursor")
+let cursorImg = document.querySelector(".cursor-img")
+function mousePos(e) {
+  cursorImg.style.left = e.clientX + "px"
+  cursorImg.style.top = e.clientY + "px"
+}
+if (myCursor) {
+  myCursor.forEach(item => {
+    item.addEventListener("mouseenter", e => {
+      mousePos(e)
+      cursorImg.style.opacity = 1
+      item.addEventListener("mousemove", e => mousePos(e))
+      item.addEventListener("pointermove", e => {
+        if (window.innerWidth > 991.98) {
+          mousePos(e)
+        }
+      })
+      item.addEventListener("mouseleave", () => {
+        cursorImg.style.opacity = 0
+      })
+    })
+  })
+}
+// custom scroll FF
+const customScroll = document.querySelectorAll(".custom-scroll")
+let isFirefox = typeof InstallTrigger !== 'undefined';
+if (isFirefox) {
+  document.documentElement.style.scrollbarColor = "#FFBC02 #FCFCFC"
+}
+if (isFirefox && customScroll) {
+  customScroll.forEach(item => { item.style.scrollbarColor = "#FFBC02 #FCFCFC" })
+}
+//materials fadeUp
+const itemMat = document.querySelectorAll(".item-mat")
+if (itemMat) {
+    itemMat.forEach((item,idx) => {
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: item,
+               // scrub: 1,
+                start: "top bottom",
+                invalidateOnRefresh: true,
+              }
+        })
+        tl.fromTo(item, 
+        {
+            opacity: 0,
+            y: 100,
+        },
+        {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            delay: idx * 0.15
+        },
+        );
+        tl.fromTo(item.querySelector(".item-mat__content"), 
+        {
+            y: 30,
+            opacity: 0,
+        }, 
+        {
+            y: 0,
+            opacity: 1
+        });
+    })
+}
+//services fadeUp
+const itemService = document.querySelectorAll(".item-service")
+if (itemService) {
+    itemService.forEach((item,idx) => {
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: item,
+               // scrub: 1,
+                start: "top bottom",
+                invalidateOnRefresh: true,
+              }
+        })
+        tl.fromTo(item, 
+        {
+            opacity: 0,
+            y: 100,
+        },
+        {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            delay: idx * 0.1
+        },
+        );
+        tl.fromTo(item.querySelector(".item-service__content"), 
+        {
+            y: 30,
+            opacity: 0,
+        }, 
+        {
+            y: 0,
+            opacity: 1,
+            duration: .8
+        });
+    })
+}
+//about fadeUp
+const itemAbout = document.querySelectorAll(".item-about")
+if (itemAbout) {
+    itemAbout.forEach((item,idx) => {
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: item,
+               // scrub: 1,
+                start: "top bottom",
+                invalidateOnRefresh: true,
+              }
+        })
+        tl.fromTo(item, 
+        {
+            opacity: 0,
+            y: 100,
+        },
+        {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            delay: idx * 0.1
+        });
+    })
+}
+//other fadeUp
+const fadeUpItm = document.querySelectorAll(".fadeUp-item")
+if (fadeUpItm) {
+    fadeUpItm.forEach((item,idx) => {
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: item,
+               // scrub: 1,
+                start: "50px bottom",
+                invalidateOnRefresh: true,
+              }
+        })
+        tl.fromTo(item, 
+        {
+            opacity: 0,
+            y: 100,
+        },
+        {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+        });
+    })
+}

@@ -90,7 +90,7 @@
                         </div>
                         <form action="" class="intro-form">
                             <div class="item-form">
-                                <input type="tel" placeholder="Ваш телефон">
+                                <input type="tel" placeholder="Ваш телефон" pattern="[0-9]*" novalidate>
                             </div>
                             <button type="submit" class="btn main-btn">Запросить расчет</button>
                         </form>
@@ -427,7 +427,7 @@
                     <span class="item-form__error"></span>
                 </div>
                 <div class="item-form">
-                    <input type="tel">
+                    <input type="tel" pattern="[0-9]*" novalidate>
                     <div class="item-form__placeholder">Номер телефона<span>*</span></div>
                     <span class="item-form__error"></span>
                 </div>
@@ -500,9 +500,10 @@
     </div>
 </div>
     </div>
-    <script src="js/libs/jquery.min.js"></script>
-<script src="js/libs/inputmask.min.js"></script>
+    <script src="js/libs/inputmask.min.js"></script>
 <script src="js/libs/swiper.min.js"></script>
+<script src="js/libs/gsap.min.js"></script>
+<script src="js/libs/ScrollTrigger.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 
