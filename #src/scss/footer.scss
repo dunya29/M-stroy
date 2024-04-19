@@ -10,6 +10,11 @@
             font-size: 12px;
         }
     }
+    .item-contact {
+        a:hover {
+            color: $primary;
+        }
+    }
     .text-s {
         color: $gray;
     }

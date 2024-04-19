@@ -49,6 +49,12 @@ body {
     opacity: 1;
   }
 }
+.my-cursor {
+  cursor: none;
+  @media (max-width: $bp2) {
+    cursor: auto;
+  }
+}
 .cursor-img {
   position: fixed;
   top: 0;

@@ -185,7 +185,6 @@ if (clientsSwiper) {
     let tl = gsap.timeline({
         scrollTrigger: {
             trigger: clientsSwiper,
-           // scrub: 1,
             start: "bottom bottom",
             invalidateOnRefresh: true,
           }
@@ -233,7 +232,7 @@ if (myCursor) {
       cursorImg.style.opacity = 1
       item.addEventListener("mousemove", e => mousePos(e))
       item.addEventListener("pointermove", e => {
-        if (window.innerWidth > 991.98) {
+        if (window.innerWidth > 1199) {
           mousePos(e)
         }
       })
@@ -259,7 +258,6 @@ if (itemMat) {
         let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: item,
-               // scrub: 1,
                 start: "top bottom",
                 invalidateOnRefresh: true,
               }
@@ -273,7 +271,7 @@ if (itemMat) {
             opacity: 1,
             y: 0,
             duration: 1,
-            delay: idx * 0.15
+            delay: idx * 0.1
         },
         );
         tl.fromTo(item.querySelector(".item-mat__content"), 
@@ -294,7 +292,6 @@ if (itemService) {
         let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: item,
-               // scrub: 1,
                 start: "top bottom",
                 invalidateOnRefresh: true,
               }
@@ -330,7 +327,6 @@ if (itemAbout) {
         let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: item,
-               // scrub: 1,
                 start: "top bottom",
                 invalidateOnRefresh: true,
               }
@@ -355,7 +351,6 @@ if (fadeUpItm) {
         let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: item,
-               // scrub: 1,
                 start: "50px bottom",
                 invalidateOnRefresh: true,
               }

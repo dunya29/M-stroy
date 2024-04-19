@@ -322,6 +322,10 @@ body.loaded .preloader {
   opacity: 1;
 }
 
+.my-cursor {
+  cursor: none;
+}
+
 .cursor-img {
   position: fixed;
   top: 0;
@@ -1603,6 +1607,10 @@ h6,
   background: #F5F5F5;
 }
 
+.footer .item-contact a:hover {
+  color: #FFBC02;
+}
+
 .footer .text-s {
   color: #8B8B8B;
 }
@@ -1879,6 +1887,10 @@ h6,
 @media (max-width: 1199.98px) {
   body {
     font-size: 16px;
+  }
+
+  .my-cursor {
+    cursor: auto;
   }
 
   .cursor-img {
